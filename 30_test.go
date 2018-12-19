@@ -9,7 +9,6 @@ func TestMinStackPush(t *testing.T) {
 		t.Errorf("Failed, expected %d, got %d", 3, stack.min())
 	}
 	stack.push(4)
-
 	if stack.min() != 3 {
 		t.Errorf("Failed, expected %d, got %d", 3, stack.min())
 	}
@@ -18,7 +17,6 @@ func TestMinStackPush(t *testing.T) {
 		t.Errorf("Failed, expected %d, got %d", 2, stack.min())
 	}
 	stack.pop()
-
 	if stack.min() != 3 {
 		t.Errorf("Failed, expected %d, got %d", 3, stack.min())
 	}
