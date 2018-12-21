@@ -13,8 +13,7 @@ func TestFindDup(t *testing.T) {
 		{-1, []int{}, 0},
 		{1, []int{1, 1, 1, 1}, 3},
 	} {
-		got := findDup(c.nums, c.length)
-		if got != c.want {
+		if got := findDup(c.nums, c.length); got != c.want {
 			t.Errorf("Failed, expect %d, got %d", c.want, got)
 		}
 	}

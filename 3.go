@@ -1,6 +1,6 @@
 package algo
 
-func findDup(nums []int, n int) int {
+func findDup(nums []int, n int) (result int) {
 	if len(nums) == 0 {
 		return -1
 	}
@@ -12,7 +12,8 @@ func findDup(nums []int, n int) int {
 	for i := 0; i < len(nums)-1; i++ {
 		for nums[i] != i {
 			if nums[i] == nums[nums[i]] {
-				return nums[i]
+				result = nums[i]
+				return
 			}
 			nums[i], nums[nums[i]] = nums[nums[i]], nums[i]
 		}
