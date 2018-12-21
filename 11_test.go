@@ -12,8 +12,7 @@ func TestFindInRotateArray(t *testing.T) {
 		{0, []int{1, 1, 1, 0, 1, 1}},
 		{-1, []int{}},
 	} {
-		got := findInRotateArray(c.nums)
-		if got != c.want {
+		if got := findInRotateArray(c.nums); got != c.want {
 			t.Errorf("Failed, expected %d, got %d", c.want, got)
 		}
 	}

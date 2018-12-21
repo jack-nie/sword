@@ -1,6 +1,6 @@
 package algo
 
-func findInRotateArray(nums []int) int {
+func findInRotateArray(nums []int) (result int) {
 	if len(nums) == 0 {
 		return -1
 	}
@@ -24,15 +24,16 @@ func findInRotateArray(nums []int) int {
 			index2 = indexMid
 		}
 	}
-	return nums[indexMid]
+	result = nums[indexMid]
+	return
 }
 
-func minInOrder(nums []int, index1, index2 int) int {
-	result := nums[index1]
+func minInOrder(nums []int, index1, index2 int) (result int) {
+	result = nums[index1]
 	for i := index1 + 1; i <= index2; i++ {
 		if result > nums[i] {
 			result = nums[i]
 		}
 	}
-	return result
+	return
 }
