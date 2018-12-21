@@ -8,7 +8,6 @@ func constructBinaryTree(preOrder, inOrder []int) *TreeNode {
 	preOrderLength := len(preOrder)
 	inOrderLength := len(inOrder)
 	return constructCore(preOrder, inOrder, 0, preOrderLength-1, 0, inOrderLength-1)
-
 }
 
 func constructCore(preOrder, inOrder []int, ps, pe, is, ie int) *TreeNode {
