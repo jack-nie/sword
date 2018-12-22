@@ -9,6 +9,10 @@ func TestVerifySequenceOfBST(t *testing.T) {
 		wanted bool
 	}{
 		{[]int{5, 7, 6, 9, 11, 10, 8}, 7, true},
+		{[]int{1, 2, 3, 4, 5}, 5, true},
+		{[]int{8, 7, 6, 5, 4}, 5, true},
+		{nil, 0, false},
+		{[]int{1}, 1, true},
 		{[]int{}, 0, false},
 		{[]int{7, 4, 6, 5}, 4, false},
 	} {
