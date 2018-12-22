@@ -21,9 +21,8 @@ func getFirstOfK(nums []int, k, left, right int) int {
 	if middleData == k {
 		if middleIndex > 0 && nums[middleIndex-1] != k || middleIndex == 0 {
 			return middleIndex
-		} else {
-			right = middleIndex - 1
 		}
+		right = middleIndex - 1
 	} else if middleData > k {
 		right = middleIndex - 1
 	} else {
