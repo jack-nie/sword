@@ -40,9 +40,8 @@ func getLastOfK(nums []int, k, left, right int) int {
 	if middleData == k {
 		if middleIndex < len(nums)-1 && nums[middleIndex+1] != k || middleIndex == len(nums)-1 {
 			return middleIndex
-		} else {
-			left = middleIndex + 1
 		}
+		left = middleIndex + 1
 	} else if middleData > k {
 		right = middleIndex - 1
 	} else {
