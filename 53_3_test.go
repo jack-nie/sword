@@ -9,6 +9,12 @@ func TestFindNumSameAsIndex(t *testing.T) {
 	}{
 		{[]int{-1, 0, 1, 3, 5, 6}, 3},
 		{[]int{-1, 0, 1, 2, 3, 4}, -1},
+		{[]int{0}, 0},
+		{[]int{2}, -1},
+		{[]int{0, 1}, 0},
+		{[]int{-3, 0, 2}, 2},
+		{nil, -1},
+		{[]int{}, -1},
 	} {
 		got := findNumSameAsIndex(v.nums)
 		if got != v.wanted {
