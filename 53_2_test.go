@@ -10,6 +10,9 @@ func TestFindMissingNums(t *testing.T) {
 	}{
 		{[]int{0, 1, 2, 4, 5, 6}, 6, 3},
 		{[]int{1, 2, 3, 4, 5, 6}, 6, 0},
+		{[]int{0, 1, 2, 3, 4, 5}, 6, 6},
+		{[]int{0}, 1, 1},
+		{nil, 0, -1},
 	} {
 		got := findMissingNums(v.nums, v.n)
 		if got != v.wanted {

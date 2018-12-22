@@ -1,16 +1,16 @@
 package algo
 
-func findMissingNums(nums []int, n int) int {
+func findMissingNums(nums []int, n int) (middle int) {
 	if len(nums) == 0 || len(nums) != n {
 		return -1
 	}
 	left := 0
 	right := n - 1
 	for left <= right {
-		middle := (right-left)>>1 + left
+		middle = (right-left)>>1 + left
 		if nums[middle] != middle {
 			if middle == 0 || nums[middle-1] == middle-1 {
-				return middle
+				return
 			}
 			right = middle - 1
 		} else {
