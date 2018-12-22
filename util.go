@@ -1,11 +1,13 @@
 package algo
 
+// TreeNode represents the tree structure
 type TreeNode struct {
 	Left  *TreeNode
 	Right *TreeNode
 	Val   int
 }
 
+// LinkList represent the link list structure
 type LinkList struct {
 	Next *LinkList
 	Val  int
