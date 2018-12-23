@@ -32,3 +32,10 @@ func max(a, b int) int {
 	}
 	return b
 }
+
+func doubleEqual(a, b float64) bool {
+	if a-b > -0.00000001 && a-b < 0.00000001 {
+		return true
+	}
+	return false
+}
