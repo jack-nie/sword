@@ -1,7 +1,7 @@
 package algo
 
 func movingCount(threshold, rows, cols int) int {
-	if threshold > 0 || rows <= 0 || cols <= 0 {
+	if threshold < 0 || rows <= 0 || cols <= 0 {
 		return 0
 	}
 	visited := make([][]bool, rows)
