@@ -11,8 +11,7 @@ func TestFindNumsOf1Between1AndN(t *testing.T) {
 		{2, 1},
 		{1000, 301},
 	} {
-		got := findNumsOf1Between1AndN(v.n)
-		if got != v.wanted {
+		if got := findNumsOf1Between1AndN(v.n); got != v.wanted {
 			t.Errorf("Failed, expeted %d, got %d", v.wanted, got)
 		}
 	}

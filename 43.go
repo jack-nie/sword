@@ -1,11 +1,11 @@
 package algo
 
-func findNumsOf1Between1AndN(n int) int {
-	count := 0
+func findNumsOf1Between1AndN(n int) (count int) {
+	count = 0
 	for i := 1; i <= n; i++ {
 		count += numberOf1(i)
 	}
-	return count
+	return
 }
 
 func numberOf1(n int) int {
