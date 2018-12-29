@@ -1,8 +1,9 @@
 package algo
 
-func findListKNums(nums []int, k int) []int {
+func findListKNums(nums []int, k int) (result []int) {
+	result = nil
 	if len(nums) == 0 {
-		return nil
+		return
 	}
 	start := 0
 	end := len(nums) - 1
@@ -16,9 +17,8 @@ func findListKNums(nums []int, k int) []int {
 			index = partition(nums, start, end)
 		}
 	}
-	var out []int
 	for i := 0; i < k; i++ {
-		out = append(out, nums[i])
+		result = append(result, nums[i])
 	}
-	return out
+	return
 }

@@ -14,8 +14,8 @@ func TestFindListKNums(t *testing.T) {
 		{[]int{3, 4, 5, 7, 1, 2}, 3, []int{1, 2, 3}},
 		{[]int{}, 1, nil},
 	} {
-		got := findListKNums(v.nums, v.k)
-		if !reflect.DeepEqual(got, v.wanted) {
+
+		if got := findListKNums(v.nums, v.k); !reflect.DeepEqual(got, v.wanted) {
 			t.Errorf("Failed, expected %d, got %d", v.wanted, got)
 		}
 	}
