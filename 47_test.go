@@ -7,10 +7,9 @@ func TestFfndGreatestValue(t *testing.T) {
 		nums   [][]int
 		wanted int
 	}{
-		{[][]int{{1, 10, 3, 8}, {12, 2, 9, 6}, {5, 7, 4, 11}, {3, 7, 16, 5}}, 53},
+		{[][]int{{1, 10, 3, 8}, {12, 2, 9, 6}, {5, 7, 4, 11}, {3, 7, 16, 5}}, 22},
 	} {
-		got := findGreatestValue(v.nums)
-		if got != v.wanted {
+		if got := findGreatestValue(v.nums); got != v.wanted {
 			t.Errorf("Failed, expected %d, got %d", v.wanted, got)
 		}
 	}

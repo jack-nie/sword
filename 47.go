@@ -1,8 +1,9 @@
 package algo
 
-func findGreatestValue(nums [][]int) int {
+func findGreatestValue(nums [][]int) (result int) {
+	result = 0
 	if len(nums) == 0 {
-		return 0
+		return
 	}
 	var maxValues []int
 	for i := 0; i < len(nums); i++ {
@@ -18,5 +19,6 @@ func findGreatestValue(nums [][]int) int {
 			maxValues = append(maxValues, max(left, up)+nums[i][j])
 		}
 	}
-	return maxValues[len(nums[0])-1]
+	result = maxValues[len(nums[0])-1]
+	return
 }
