@@ -39,3 +39,26 @@ func doubleEqual(a, b float64) bool {
 	}
 	return false
 }
+
+func generateListFromSlice(nums []int) *LinkList {
+	list := new(LinkList)
+	for i := 0; i < len(nums); i++ {
+		list.Next = new(LinkList)
+		list.Next.Val = nums[i]
+	}
+	return list
+}
+
+func convertListToSlice(list *LinkList) []int {
+	if list == nil {
+		return nil
+	}
+
+	node := list
+	result := make([]int, 0)
+	for node.Next != nil {
+		result = append(result, node.Val)
+		node = node.Next
+	}
+	return result
+}

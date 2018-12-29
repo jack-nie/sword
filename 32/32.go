@@ -29,6 +29,7 @@ func printTreeFromTopToBottom(root *TreeNode) {
 
 func main() {
 	root := &TreeNode{nil, nil, 5}
+
 	root.Left = &TreeNode{nil, nil, 3}
 	root.Left.Left = &TreeNode{nil, nil, 2}
 	root.Left.Right = &TreeNode{nil, nil, 4}
