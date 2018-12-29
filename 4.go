@@ -1,8 +1,9 @@
 package algo
 
-func findInTwoDimensionArray(nums [][]int, target int) bool {
+func findInTwoDimensionArray(nums [][]int, target int) (result bool) {
+	result = false
 	if len(nums) == 0 {
-		return false
+		return
 	}
 
 	columns := len(nums[0]) - 1
@@ -11,12 +12,13 @@ func findInTwoDimensionArray(nums [][]int, target int) bool {
 	column := columns
 	for row <= rows && column >= 0 {
 		if nums[row][column] == target {
-			return true
+			result = true
+			return
 		} else if nums[row][column] > target {
 			column--
 		} else {
 			row++
 		}
 	}
-	return false
+	return
 }
