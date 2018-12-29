@@ -11,8 +11,8 @@ func TestFindGreatestSumOfSubArray(t *testing.T) {
 		{nil, 0},
 		{[]int{1, -2, 3, 10, -4, 7, 2, -5}, 18},
 	} {
-		got := findGreatestSumOfSubArray(v.nums)
-		if got != v.wanted {
+
+		if got := findGreatestSumOfSubArray(v.nums); got != v.wanted {
 			t.Errorf("Failed, expected %d, got %d", v.wanted, got)
 		}
 	}

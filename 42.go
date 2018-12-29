@@ -1,10 +1,11 @@
 package algo
 
-func findGreatestSumOfSubArray(nums []int) int {
+func findGreatestSumOfSubArray(nums []int) (result int) {
+	result = 0
 	if len(nums) == 0 {
-		return 0
+		return
 	}
-	var sum, greatestSum int
+	var sum int
 	for i := 0; i < len(nums); i++ {
 
 		if sum < 0 {
@@ -12,9 +13,9 @@ func findGreatestSumOfSubArray(nums []int) int {
 		} else {
 			sum += nums[i]
 		}
-		if sum > greatestSum {
-			greatestSum = sum
+		if sum > result {
+			result = sum
 		}
 	}
-	return greatestSum
+	return
 }
