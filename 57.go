@@ -1,8 +1,9 @@
 package algo
 
 func findNumsWithSum(nums []int, target int) (result []int) {
+	result = nil
 	if len(nums) == 0 {
-		return nil
+		return
 	}
 
 	left := 0
@@ -20,5 +21,5 @@ func findNumsWithSum(nums []int, target int) (result []int) {
 			right--
 		}
 	}
-	return nil
+	return
 }

@@ -14,9 +14,7 @@ func TestFindNumsWithSum(t *testing.T) {
 		{[]int{1, 2, 3, 4, 5, 6}, 7, []int{1, 6}},
 		{[]int{}, 8, nil},
 	} {
-		got := findNumsWithSum(v.nums, v.target)
-
-		if !reflect.DeepEqual(got, v.wanted) {
+		if got := findNumsWithSum(v.nums, v.target); !reflect.DeepEqual(got, v.wanted) {
 			t.Errorf("Failed, expected  %d, got %d", v.wanted, got)
 		}
 	}
