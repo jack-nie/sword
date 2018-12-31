@@ -14,8 +14,8 @@ func TestFindMissingNums(t *testing.T) {
 		{[]int{0}, 1, 1},
 		{nil, 0, -1},
 	} {
-		got := findMissingNums(v.nums, v.n)
-		if got != v.wanted {
+
+		if got := findMissingNums(v.nums, v.n); got != v.wanted {
 			t.Fatalf("Failed, expected %d, got %d", v.wanted, got)
 		}
 	}

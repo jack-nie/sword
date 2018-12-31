@@ -29,8 +29,7 @@ func TestFindFirstCommonNode(t *testing.T) {
 	}{
 		{list1, list2, target},
 	} {
-		got := findFirstCommonNode(list1, list2)
-		if got != v.wanted {
+		if got := findFirstCommonNode(list1, list2); got.Val != v.wanted.Val {
 			t.Fatalf("Failed, expected %d, got %d", v.wanted.Val, got.Val)
 		}
 	}

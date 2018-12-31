@@ -25,6 +25,7 @@ func getLengthOfList(list *LinkList) int {
 	if list == nil {
 		return 0
 	}
+
 	length := 0
 	for list != nil {
 		list = list.Next
