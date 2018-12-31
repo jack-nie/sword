@@ -1,8 +1,9 @@
 package algo
 
-func treeDepth(root *TreeNode) int {
+func treeDepth(root *TreeNode) (result int) {
+	result = 0
 	if root == nil {
-		return 0
+		return
 	}
 	left := treeDepth(root.Left)
 	right := treeDepth(root.Right)
