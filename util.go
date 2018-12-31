@@ -42,11 +42,18 @@ func doubleEqual(a, b float64) bool {
 
 func generateListFromSlice(nums []int) *LinkList {
 	list := new(LinkList)
+	node := list
 	for i := 0; i < len(nums); i++ {
-		list.Next = new(LinkList)
-		list.Next.Val = nums[i]
+		listPushBack(list, nums[i])
 	}
-	return list
+	return node.Next
+}
+
+func listPushBack(list *LinkList, value int) {
+	newNode := new(LinkList)
+	newNode.Val = value
+	newNode.Next = list.Next
+	list.Next = newNode
 }
 
 func convertListToSlice(list *LinkList) []int {
