@@ -32,8 +32,7 @@ func TestIsBalancedTree(t *testing.T) {
 		{root2, false},
 		{nil, true},
 	} {
-		got := isBalancedTree(v.root)
-		if got != v.wanted {
+		if got := isBalancedTree(v.root); got != v.wanted {
 			t.Fatalf("Failed, expected %t, got %t", v.wanted, got)
 		}
 	}
