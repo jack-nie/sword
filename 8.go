@@ -1,10 +1,10 @@
 package algo
 
-func getNext(root *TreeNode) *TreeNode {
+func getNext(root *TreeNodeWithParent) *TreeNodeWithParent {
 	if root == nil {
 		return nil
 	}
-	var next *TreeNode
+	var next *TreeNodeWithParent
 	if root.Right != nil {
 		right := root.Right
 		for right.Left != nil {

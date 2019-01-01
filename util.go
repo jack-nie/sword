@@ -7,6 +7,14 @@ type TreeNode struct {
 	Val   int
 }
 
+//TreeNodeWithParent represents tree with parent
+type TreeNodeWithParent struct {
+	Left   *TreeNodeWithParent
+	Right  *TreeNodeWithParent
+	Parent *TreeNodeWithParent
+	Val    int
+}
+
 // LinkList represent the link list structure
 type LinkList struct {
 	Next *LinkList
